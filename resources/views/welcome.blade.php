@@ -55,21 +55,19 @@
         <li><a href="">Portfolio</a></li>
         <li><a href="">Lokasi</a></li>
         {{-- <li><a href="">Blog</a></li> --}}
-        <li><a href="{{ route('login') }}" >Login</a></li>
-        <li><a href="{{ route('register') }}">Register</a></li>
+        {{-- <li><a href="{{ route('register') }}">Register</a></li> --}}
         @if (Route::has('login'))
-        <div >
             @auth
-                <a href="{{ url('/home') }}" class="btn btn-default">Dashboard</a>
+                <li><a href="{{ url('/home') }}">Dashboard</a></li>
             @else
-                <a href="{{ route('login') }}">Log in</a>
+                <li><a href="{{ route('login') }}">Log in</a></li>
 
                 @if (Route::has('register'))
-                    <a href="{{ route('register') }}">Register</a>
+                    <li><a href="{{ route('register') }}">Register</a></li>
                 @endif
             @endauth
-        </div>
         @endif
+    </li>
     </ul>
     <i class="bi bi-list mobile-nav-toggle"></i>
     </nav><!-- .navbar -->
@@ -87,7 +85,7 @@
     <div class="carousel-inner" role="listbox">
 
         <!-- Slide 1 -->
-        <div class="carousel-item active" style="background: url({{asset('template')}}/assets/img/slide/slide-1.jpg)">
+        <div class="carousel-item active" style="background: url({{asset('template')}}/assets/img/slide/mua.jpg)">
         <div class="carousel-container">
             <div class="carousel-content">
             <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Penata Rias Indramayu</span></h2>

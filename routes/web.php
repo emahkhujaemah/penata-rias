@@ -18,7 +18,7 @@ use App\Http\Controllers\PortofolioController;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('pengunjung.home');
 });
 
 Auth::routes();

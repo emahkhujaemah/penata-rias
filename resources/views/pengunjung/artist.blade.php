@@ -4,8 +4,25 @@
 
 @section('content')
 
+    <div class="hero-container">
+    </div>
+
+
 <!-- #main -->
 <main id="main">
+
+    <!-- ======= Breadcrumbs ======= -->
+    <section id="breadcrumbs" class="breadcrumbs">
+        <div class="container">
+  
+          <ol>
+            <li><a href="index.html">Home</a></li>
+            <li>Team</li>
+          </ol>
+          <h2>Team</h2>
+  
+        </div>
+      </section><!-- End Breadcrumbs -->
 
     <!-- ======= Team Section ======= -->
     <section id="team" class="team">
@@ -14,7 +31,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                 <div class="member">
-                    <img src="{{asset('template')}}/assets/img/team/team-1.jpg" alt="">
+                    <img src="{{asset('img')}}/team/team-1.jpg" alt="">
                     <h4>Walter White</h4>
                     <span>Chief Executive Officer</span>
                     <p>
@@ -31,7 +48,7 @@
 
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                 <div class="member">
-                    <img src="{{asset('template')}}/assets/img/team/team-2.jpg" alt="">
+                    <img src="{{asset('img')}}/team/team-2.jpg" alt="">
                     <h4>Sarah Jhinson</h4>
                     <span>Product Manager</span>
                     <p>
@@ -48,7 +65,7 @@
 
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                 <div class="member">
-                    <img src="{{asset('template')}}/assets/img/team/team-3.jpg" alt="">
+                    <img src="{{asset('img')}}/team/team-3.jpg" alt="">
                     <h4>William Anderson</h4>
                     <span>CTO</span>
                     <p>

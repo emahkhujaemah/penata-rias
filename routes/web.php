@@ -21,6 +21,18 @@ Route::get('/', function () {
     return view('pengunjung.home');
 });
 
+Route::get('/artist', function () {
+    return view('pengunjung.artist');
+});
+
+Route::get('/p_portofolio', function () {
+    return view('pengunjung.portofolio');
+});
+
+Route::get('/p_lokasi', function () {
+    return view('pengunjung.lokasi');
+});
+
 Auth::routes();
 
 Route::group(['middleware' => 'auth'], function () {

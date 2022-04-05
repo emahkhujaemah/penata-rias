@@ -11,9 +11,9 @@
         <ul>
             <li><a class="active" href="/">Home</a></li>
             {{-- <li><a href="">About</a></li> --}}
-            <li><a href="">Artist</a></li>
-            <li><a href="">Portfolio</a></li>
-            <li><a href="">Lokasi</a></li>
+            <li><a href="/artist">Artist</a></li>
+            <li><a href="/p_portofolio">Portfolio</a></li>
+            <li><a href="/p_lokasi">Lokasi</a></li>
             @if (Route::has('login'))
                 @auth
                     <li><a href="{{ url('/home') }}">Dashboard</a></li>

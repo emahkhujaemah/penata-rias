@@ -13,7 +13,7 @@
         <div class="carousel-inner" role="listbox">
 
             <!-- Slide 1 -->
-            <div class="carousel-item active" style="background: url({{asset('template')}}/assets/img/slide/mua.jpg)">
+            <div class="carousel-item active" style="background: url({{asset('img')}}/mua.jpg)">
             <div class="carousel-container">
                 <div class="carousel-content">
                 <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Penata Rias Indramayu</span></h2>
@@ -24,7 +24,7 @@
             </div>
 
             <!-- Slide 2 -->
-            {{-- <div class="carousel-item" style="background: url({{asset('template')}}/assets/img/slide/slide-2.jpg)">
+            {{-- <div class="carousel-item" style="background: url({{asset('template')}}/slide/slide-2.jpg)">
                 <div class="carousel-container">
                     <div class="carousel-content">
                     <h2 class="animate__animated fanimate__adeInDown">Lorem <span>Ipsum Dolor</span></h2>
@@ -59,7 +59,7 @@
             <div class="row">
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                 <div class="member">
-                    <img src="{{asset('template')}}/assets/img/team/team-1.jpg" alt="">
+                    <img src="{{asset('img')}}/team/team-1.jpg" alt="">
                     <h4>Walter White</h4>
                     <span>Chief Executive Officer</span>
                     <p>
@@ -76,7 +76,7 @@
 
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                 <div class="member">
-                    <img src="{{asset('template')}}/assets/img/team/team-2.jpg" alt="">
+                    <img src="{{asset('img')}}/team/team-2.jpg" alt="">
                     <h4>Sarah Jhinson</h4>
                     <span>Product Manager</span>
                     <p>
@@ -93,7 +93,7 @@
 
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                 <div class="member">
-                    <img src="{{asset('template')}}/assets/img/team/team-3.jpg" alt="">
+                    <img src="{{asset('img')}}/team/team-3.jpg" alt="">
                     <h4>William Anderson</h4>
                     <span>CTO</span>
                     <p>

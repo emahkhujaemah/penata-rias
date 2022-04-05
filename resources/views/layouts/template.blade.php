@@ -13,12 +13,12 @@
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
 <!-- Vendor CSS Files -->
-<link href="{{asset('vendor')}}/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-<link href="{{asset('vendor')}}/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-<link href="{{asset('vendor')}}/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
-<link href="{{asset('vendor')}}/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-<link href="{{asset('vendor')}}/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-<link href="{{asset('vendor')}}/vendor/animate.css/animate.min.css" rel="stylesheet">
+<link href="{{asset('template')}}/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<link href="{{asset('template')}}/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+<link href="{{asset('template')}}/boxicons/css/boxicons.min.css" rel="stylesheet">
+<link href="{{asset('template')}}/glightbox/css/glightbox.min.css" rel="stylesheet">
+<link href="{{asset('template')}}/swiper/swiper-bundle.min.css" rel="stylesheet">
+<link href="{{asset('template')}}/animate.css/animate.min.css" rel="stylesheet">
 
 <!-- Template Main CSS File -->
 <link href="{{asset('css')}}/style.css" rel="stylesheet">
@@ -47,13 +47,13 @@
 <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
 <!-- Vendor JS Files -->
-<script src="{{asset('vendor')}}/vendor/purecounter/purecounter.js"></script>
-<script src="{{asset('vendor')}}/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="{{asset('vendor')}}/vendor/glightbox/js/glightbox.min.js"></script>
-<script src="{{asset('vendor')}}/vendor/isotope-layout/isotope.pkgd.min.js"></script>
-<script src="{{asset('vendor')}}/vendor/swiper/swiper-bundle.min.js"></script>
-<script src="{{asset('vendor')}}/vendor/waypoints/noframework.waypoints.js"></script>
-<script src="{{asset('vendor')}}/vendor/php-email-form/validate.js"></script>
+<script src="{{asset('template')}}/purecounter/purecounter.js"></script>
+<script src="{{asset('template')}}/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="{{asset('template')}}/glightbox/js/glightbox.min.js"></script>
+<script src="{{asset('template')}}/isotope-layout/isotope.pkgd.min.js"></script>
+<script src="{{asset('template')}}/swiper/swiper-bundle.min.js"></script>
+<script src="{{asset('template')}}/waypoints/noframework.waypoints.js"></script>
+<script src="{{asset('template')}}/php-email-form/validate.js"></script>
 
 <!-- Template Main JS File -->
 <script src="{{asset('js')}}/main.js"></script>

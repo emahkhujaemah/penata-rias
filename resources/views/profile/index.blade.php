@@ -85,7 +85,9 @@
                         <td>{{$profil->profil_bio}}</td>
                         <td>{{$profil->tempat_kerja}}</td>
                         <td>{{$profil->status}}</td>
-                        <td>{{$profil->foto_profil}}</td>
+                        <td>
+                            <img src="{{asset('storage/' . $profil->foto_profil)}}" class="img-fluid" height="50px" alt="{{ $profil->name }}">
+                        </td>
                         <td >                                        
                             <form method="post" action="/profil/{{$profil->id}}" class="form-inline">
                                 <a href="/profil/{{$profil->id}}" class="btn btn-sm btn-success" ><i class="fas fa-eye"></i></a>

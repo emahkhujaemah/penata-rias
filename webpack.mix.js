@@ -11,16 +11,7 @@ const mix = require('laravel-mix');
  |
  */
 
-// mix.js('resources/js/app.js', 'public/js')
-//     .sass('resources/sass/app.scss', 'public/css')
-//     .sourceMaps();
-
 mix.js('resources/js/app.js', 'public/js')
-    .react()
-<<<<<<< HEAD
-    .sass('resources/sass/app.scss', 'public/css');
-=======
-    .extract(['react'])
-    .postCss('resources/css/app.css', 'public/css', [
-    ]);
->>>>>>> emah
+    .sass('resources/sass/app.scss', 'public/css')
+    .sourceMaps();
+

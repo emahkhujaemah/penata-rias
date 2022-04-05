@@ -49,7 +49,7 @@ class ProfileController extends Controller
             'name' => 'required|max:255',
             'email' => 'required|email|unique:users',
             'password' => 'required|min:5|max:255',
-            'nama_pemilik' => 'required',
+            'nama_pemilik' => 'required|max:100',
             'alamat' => 'required',
             'whatsapp' => 'required',
             'sosial_media' => 'required',
@@ -61,7 +61,7 @@ class ProfileController extends Controller
 
         $validatedData['password'] = Hash::make($validatedData['password']);
 
-        if($request->file('foto_profil')){
+        if($request->file('image')){
             $validatedData['foto_profil'] = $request->file('foto_profil')->store('foto_profil');
         }
 

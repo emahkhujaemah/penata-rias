@@ -13,7 +13,7 @@ require('./bootstrap');
  */
 
 // Register React components
-require('./components/Example');
+// require('./components/Example');
 // require('./components/Header');
 // require('./pages/Home');
 // require('./components/User');

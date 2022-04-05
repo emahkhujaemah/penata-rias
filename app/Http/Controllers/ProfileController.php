@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
+use Illuminate\Support\Facades\Storage;
 
 class ProfileController extends Controller
 {
@@ -61,7 +62,7 @@ class ProfileController extends Controller
 
         $validatedData['password'] = Hash::make($validatedData['password']);
 
-        if($request->file('image')){
+        if($request->file('foto_profil')){
             $validatedData['foto_profil'] = $request->file('foto_profil')->store('foto_profil');
         }
 
@@ -87,9 +88,11 @@ class ProfileController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function edit(User $user)
+    public function edit(User $profile)
     {
-        //
+        return view('profile.edit', [
+            'profile' => $profile,
+        ]);
     }
 
     /**
@@ -101,7 +104,35 @@ class ProfileController extends Controller
      */
     public function update(Request $request, User $user)
     {
-        //
+        $validatedData = $request->validate([
+            'name' => 'required|max:255',
+            'email' => 'required|email|unique:users',
+            'password' => 'required|min:5|max:255',
+            'nama_pemilik' => 'required|max:100',
+            'alamat' => 'required',
+            'whatsapp' => 'required',
+            'sosial_media' => 'required',
+            'profil_bio' => 'required',
+            'tempat_kerja' => 'required',
+            'status' => 'required',
+            'foto_profil' => 'image|file|max:1024',
+        ]);
+
+        $validatedData['password'] = Hash::make($validatedData['password']);
+
+        if($request->file('image')){
+            if ($request->oldImage) {
+                storage::delete($request->oldImage);
+            }
+            $validatedData['foto_profil'] = $request->file('image')->store('foto_profil');
+        }
+
+        User::where('id', $user->id)
+                ->update($validatedData);
+
+        return redirect('profile')->with('success', 'Profil has been updated');
+
+
     }
 
     /**
@@ -110,8 +141,16 @@ class ProfileController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function destroy(User $user)
+    public function destroy($id)
     {
-        //
+
+        $profile =User::where('id',$id)->first();
+        $profile->delete();
+
+        if ($profile->foto_profil) {
+            storage::delete($profile->foto_profil);
+        }
+
+        return redirect('profile')->with('success', 'Profile user has been deleted');
     }
 }

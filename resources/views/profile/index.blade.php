@@ -86,12 +86,12 @@
                         <td>{{$profil->tempat_kerja}}</td>
                         <td>{{$profil->status}}</td>
                         <td>
-                            <img src="{{asset('storage/' . $profil->foto_profil)}}" class="img-fluid" height="50px" alt="{{ $profil->name }}">
+                            <img src="{{asset('storage/' . $profil->foto_profil)}}" class="img-fluid" height="50px" alt="{{ $profil->foto_profil }}">
                         </td>
                         <td >                                        
-                            <form method="post" action="/profil/{{$profil->id}}" class="form-inline">
-                                <a href="/profil/{{$profil->id}}" class="btn btn-sm btn-success" ><i class="fas fa-eye"></i></a>
-                                <a href="/profil/{{$profil->id}}/edit" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>
+                            <form method="post" action="/profile/{{$profil->id}}" class="form-inline">
+                                <a href="/profile/{{$profil->id}}" class="btn btn-sm btn-success" ><i class="fas fa-eye"></i></a>
+                                <a href="/profile/{{$profil->id}}/edit" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>
                                 @csrf
                                 @method('delete')
                                 <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete "><i class="fas fa-trash"></i></button>    

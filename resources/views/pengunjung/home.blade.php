@@ -17,7 +17,7 @@
             <div class="carousel-container">
                 <div class="carousel-content">
                 <h2 class="animate__animated animate__fadeInDown">Welcome to <span>Penata Rias Indramayu</span></h2>
-                <p class="animate__animated animate__fadeInUp">Website ini adalah website yang dibuat untuk membantu para <b>Penata Rais : Make-Up Artist (MUA)</b>  untuk menjelaskan jasa yang mereka layani dan Pengalaman yang pernah lakukan kepada pelanggan sebelumnya. Dan sebagai acuan untuk warga Indonesia, Khususnya masyarakat daerah Indramayu dalam memilih jasa penata rias sesuai dengan kriteria yang dibutuhkan.</p>
+                <p class="animate__animated animate__fadeInUp">Website ini adalah website yang dibuat untuk membantu para <b>Penata Rias : Make-Up Artist (MUA)</b>  untuk menjelaskan jasa yang mereka layani dan Pengalaman yang pernah lakukan kepada pelanggan sebelumnya. Dan sebagai acuan untuk warga Indonesia, Khususnya masyarakat daerah Indramayu dalam memilih jasa penata rias sesuai dengan kriteria yang dibutuhkan.</p>
                 <a href="" class="btn-get-started animate__animated animate__fadeInUp">Read More</a>
                 </div>
             </div>

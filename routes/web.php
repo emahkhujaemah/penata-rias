@@ -16,7 +16,6 @@ use App\Http\Controllers\PortofolioController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Auth::routes();
 
 Route::get('/', [HomeController::class, 'index']);
 
@@ -36,7 +35,7 @@ Route::get('/p_lokasi', function () {
     return view('pengunjung.lokasi');
 });
 
-
+Auth::routes();
 
 Route::group(['middleware' => 'auth'], function () {
     Route::get('/dashboard', [HomeController::class, 'dashboard']);

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\User;
+use App\Models\Portofolio;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Storage;
@@ -48,7 +49,7 @@ class ProfileController extends Controller
         // return $request;
         $validatedData = $request->validate([
             'name' => 'required|max:255',
-            'email' => 'required|email|unique:users',
+            'email' => 'required|email',
             'password' => 'required|min:5|max:255',
             'nama_pemilik' => 'required|max:100',
             'alamat' => 'required',
@@ -66,7 +67,21 @@ class ProfileController extends Controller
             $validatedData['foto_profil'] = $request->file('foto_profil')->store('foto_profil');
         }
 
-        User::create($validatedData);
+        $validatedData = User::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'password' => $request->password,
+            'nama_pemilik' => $request->nama_pemilik,
+            'alamat' => $request->alamat,
+            'whatsapp' => $request->whatsapp,
+            'sosial_media' => $request->sosial_media,
+            'profil_bio' => $request->profil_bio,
+            'tempat_kerja' => $request->tempat_kerja,
+            'status' => $request->status,
+            'foto_profil' => $request->foto_profil,
+        ]);
+
+        Portofolio::create($validatedData);
 
         return redirect('profile')->with('success', 'Profil telah ditambahkan');
     }

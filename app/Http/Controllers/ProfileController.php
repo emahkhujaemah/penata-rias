@@ -102,11 +102,12 @@ class ProfileController extends Controller
      * @param  \App\Models\User  $user
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, User $user)
+    public function update(Request $request, $id)
     {
+        // dd($request);
         $validatedData = $request->validate([
             'name' => 'required|max:255',
-            'email' => 'required|email|unique:users',
+            'email' => 'required|email',
             'password' => 'required|min:5|max:255',
             'nama_pemilik' => 'required|max:100',
             'alamat' => 'required',
@@ -120,15 +121,15 @@ class ProfileController extends Controller
 
         $validatedData['password'] = Hash::make($validatedData['password']);
 
-        if($request->file('image')){
+        if($request->file('foto_profil')){
             if ($request->oldImage) {
                 storage::delete($request->oldImage);
             }
-            $validatedData['foto_profil'] = $request->file('image')->store('foto_profil');
+            $validatedData['foto_profil'] = $request->file('foto_profil')->store('foto_profil');
         }
 
-        User::where('id', $user->id)
-                ->update($validatedData);
+        $profile = User::find($id)
+            ->update($validatedData);
 
         return redirect('profile')->with('success', 'Profil has been updated');
 

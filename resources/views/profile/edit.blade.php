@@ -16,6 +16,7 @@
         </div>
         <div class="card-body">
             <form action="/profile/{{$profile->id}}" method="POST" enctype="multipart/form-data" >
+                @method('put')
                 @csrf
                 <div class="row">
                     <div class="col-lg-6">
@@ -105,29 +106,14 @@
                         </div>
                         <div class="form-group">                         
                             <label for="profil_bio">Profil Bio</label>
-                            <textarea name="profil_bio" class="form-control" rows="3" placeholder="Enter ..." value="{{old('profil_bio', $profile->profil_bio)}}">
-                            </textarea>
+                            <input name="profil_bio" id="profil_bio" class="form-control" placeholder="Enter ..." value="{{old('profil_bio', $profile->profil_bio)}}">
+                            
                             <div class="text-danger">
                                 @error('profil_bio')
                                 {{$message}}
                                 @enderror
                             </div>
                         </div>
-                        {{-- <div class="mb-3">
-                            <label for="foto_profile" class="form-label">Post Image</label>
-                            <input type="hidden" name="oldImage" value=" {{$post->image}} ">
-                            @if ($post->image)
-                                <img src="{{asset('storage/' . $post->image)}}" class="img-preview img-fluid mb-3 col-sm-5 d-block">
-                            @else           
-                                <img class="img-preview img-fluid mb-3 col-sm-5">
-                            @endif
-                            <input class="form-control @error('image') is-invalid @enderror" id="image" type="file" name="image"  onchange="previewImage()">
-                            @error('image')
-                            <div class="invalid-feedback">
-                                {{$message}}
-                            </div>           
-                            @enderror
-                        </div>  --}}
                         <div class="form-group">
                             <label for="foto_profil" class="form-label">Gambar Profil</label>
                             <input type="hidden" name="oldImage" value=" {{$profile->foto_profil}} ">

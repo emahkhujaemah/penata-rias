@@ -105,7 +105,7 @@
                         </div>
                         <div class="form-group">                         
                             <label for="profil_bio">Profil Bio</label>
-                            <textarea name="profil_bio" class="form-control" rows="3" placeholder="Enter ..." value="{{old('profil_bio')}}"></textarea>
+                            <textarea name="profil_bio" id="profil_bio" class="form-control" rows="3" placeholder="Enter"  value="{{old('profil_bio')}}"></textarea>
                             <div class="text-danger">
                                 @error('profil_bio')
                                 {{$message}}

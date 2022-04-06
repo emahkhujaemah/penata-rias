@@ -123,13 +123,22 @@
 
 <script>
     function previewImage(){
-        const image = document.querySelector('#gambar_utama');
+        const image = document.querySelector(['#gambar_utama', '#gambar1', '#gambar2', '#gambar3']);
+        // const image = document.querySelector('#gambar_utama');
+        // const image1 = document.querySelector('#gambar1');
+        // const image2 = document.querySelector('#gambar2');
+        // const image3 = document.querySelector('#gambar3');
         const imgPreview = document.querySelector('.img-preview');
 
         imgPreview.style.display = 'block';
 
         const oFReader = new FileReader();
-        oFReader.readAsDataURL(image.files[0]);
+
+        for (let index = 0; index < array.length; index++) {
+            // const element = array[index];
+            oFReader.readAsDataURL(image.files[index]);
+        }
+        
 
         oFReader.onload = function(oFREvent){
             imgPreview.src = oFREvent.target.result;

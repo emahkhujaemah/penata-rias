@@ -193,7 +193,7 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => '/',
+    'dashboard_url' => 'dashboard',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',
@@ -248,7 +248,7 @@ return [
         ],
         [
             'text'        => 'Dashboard',
-            'url'         => 'home',
+            'url'         => 'dashboard',
             'icon'        => 'nav-icon fas fa-tachometer-alt',
         ],
         ['header' => 'account_settings'],

@@ -88,32 +88,34 @@
                         <td>
                             <img src="{{asset('storage/' . $profil->foto_profil)}}" class="img-fluid" height="50px" alt="{{ $profil->foto_profil }}">
                         </td>
-                        <td >                                        
+                        <td >    
+                            <a href="/profile/{{$profil->id}}" class="btn btn-sm btn-success" ><i class="fas fa-eye"></i></a>
+                            <a href="/profile/{{$profil->id}}/edit" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i><a>
+                             
                             <form method="post" action="/profile/{{$profil->id}}" class="form-inline">
-                                <a href="/profile/{{$profil->id}}" class="btn btn-sm btn-success" ><i class="fas fa-eye"></i></a>
-                                <a href="/profile/{{$profil->id}}/edit" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>
                                 @csrf
-                                @method('delete')
-                                <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete "><i class="fas fa-trash"></i></button>    
-                            </form>           
-                            <div class="modal modal-danger fade" id="delete ">
-                                <div class="modal-dialog modal-sm">
-                                <div class="modal-content">
-                                <div class="modal-header">
-                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                                        <span aria-hidden="true">&times;</span></button>
-                                    <h4 class="modal-title"></h4>
-                                    </div>
-                                    <div class="modal-body">
-                                    <p>Apakah Anda Yakin Ingin Menghapus Data Ini....???</p>
-                                    </div>
-                                    <div class="modal-footer">
-                                    <button type="button" class="btn btn-outline pull-left" data-dismiss="modal">No</button>
-                                    <button type="button" class="btn btn-outline pull-right">Yes</button>
-                                </div>
-                                </div>
-                                </div>                                
-                            </div>                            
+                                @method('delete') 
+                                <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete"><i class="fas fa-trash"></i></button>
+                                <div class="modal fade" id="delete">
+                                    <div class="modal-dialog modal-sm">
+                                        <div class="modal-content bg-danger">
+                                            <div class="modal-header">
+                                                <h4 class="modal-title">{{$profil->name}}</h4>
+                                                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                                        <span aria-hidden="true">&times;</span>
+                                                    </button>
+                                                </div>
+                                                <div class="modal-body">
+                                                    <p>Apakah Anda Yakin Menghapus Data Ini....???&hellip;</p>
+                                                </div>
+                                                <div class="modal-footer justify-content-between">
+                                                    <button type="button" class="btn btn-outline-light" data-dismiss="modal">No</button>
+                                                    <button type="button" class="btn btn-outline-light">Yes</button>
+                                            </div>
+                                        </div>
+                                    </div>                                
+                                </div> 
+                            </form>
                         </td>                  
                     </tr>
                 @endforeach

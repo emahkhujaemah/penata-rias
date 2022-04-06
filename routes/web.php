@@ -17,11 +17,11 @@ use App\Http\Controllers\PortofolioController;
 |
 */
 
-Route::get('/', [HomeController::class, 'index']);
+// Route::get('/', [HomeController::class, 'index']);
 
-// Route::get('/', function () {
-//     return view('pengunjung.home');
-// });
+Route::get('/', function () {
+    return view('pengunjung.home');
+});
 
 Route::get('/artist', function () {
     return view('pengunjung.artist');

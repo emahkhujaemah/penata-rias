@@ -162,14 +162,14 @@ class ProfileController extends Controller
     public function destroy($id)
     {
 
-        $profile =User::where('id',$id)->first();
+        $profile = User::where('id',$id)->first();
         $profile->delete();
 
         if ($profile->foto_profil) {
             storage::delete($profile->foto_profil);
         }
 
-        $portofolio =Portofolio::where('id',$id)->first();
+        $portofolio = Portofolio::where('id',$id)->first();
         $portofolio->delete();
 
         return redirect('profile')->with('success', 'Profile user has been deleted');

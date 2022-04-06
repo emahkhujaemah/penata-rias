@@ -63,7 +63,7 @@ class User extends Authenticatable
 
     public function portofolio()
     {
-        return $this->hasOne(Portofolio::class);
+        return $this->hasMany(Portofolio::class);
     }
 
 }

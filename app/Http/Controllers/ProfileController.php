@@ -132,8 +132,6 @@ class ProfileController extends Controller
             ->update($validatedData);
 
         return redirect('profile')->with('success', 'Profil has been updated');
-
-
     }
 
     /**

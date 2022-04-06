@@ -55,7 +55,7 @@
         <div class="card">
             <div class="card-body">
             <div class="mb-3">
-                {{-- <a href="/portofolio/create" class="btn btn-primary btn-sm me-5"><i class="fa fa-fw fa-plus-square"></i>Tambah Data</a> --}}
+                <a href="/portofolio/create" class="btn btn-primary btn-sm me-5"><i class="fa fa-fw fa-plus-square"></i>Tambah Data</a>
             </div>
             <table id="example1" class="table table-bordered table-striped">
                 <thead>
@@ -70,9 +70,7 @@
                 <th>Gambar2</th>
                 <th>Gambar3</th>
                 <th>Gambar3</th>
-                <th>Gambar4</th>
-                <th>Gambar5</th>
-                <th>Gambar6</th> --}}
+                <th>Gambar4</th> --}}
                 </tr>
                 </thead>
                 <tbody>

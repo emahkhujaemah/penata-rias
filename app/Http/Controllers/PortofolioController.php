@@ -53,10 +53,6 @@ class PortofolioController extends Controller
             'gambar_utama' => 'image|file|max:1024',
             'gambar1' => 'image|file|max:1024',
             'gambar2' => 'image|file|max:1024',
-            'gambar3' => 'image|file|max:1024',
-            'gambar4' => 'image|file|max:1024',
-            'gambar5' => 'image|file|max:1024',
-            'gambar6' => 'image|file|max:1024',
         ]);
 
         $gambar = $request->file([

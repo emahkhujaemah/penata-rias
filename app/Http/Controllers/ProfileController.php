@@ -34,7 +34,9 @@ class ProfileController extends Controller
      */
     public function create()
     {
-        return view('profile.create');
+        return view('profile.create',[
+            'portofolio' => Portofolio::all()
+        ]);
     }
 
     /**
@@ -61,12 +63,6 @@ class ProfileController extends Controller
             'foto_profil' => 'image|file|max:1024',
         ]);
 
-        $validatedData['password'] = Hash::make($validatedData['password']);
-
-        if($request->file('foto_profil')){
-            $validatedData['foto_profil'] = $request->file('foto_profil')->store('foto_profil');
-        }
-
         $validatedData = User::create([
             'name' => $request->name,
             'email' => $request->email,
@@ -81,9 +77,17 @@ class ProfileController extends Controller
             'foto_profil' => $request->foto_profil,
         ]);
 
-        Portofolio::create($validatedData);
+        $validatedData['password'] = Hash::make($validatedData['password']);
 
-        return redirect('profile')->with('success', 'Profil telah ditambahkan');
+        if($request->file('foto_profil')){
+            $validatedData['foto_profil'] = $request->file('foto_profil')->store('foto_profil');
+        }
+
+        $portofolio = Portofolio::create([
+            'user_id' => $validatedData->id,
+        ]);
+
+        return redirect('portofolio')->with('success', 'Portofolio telah ditambahkan');
     }
 
     /**
@@ -164,6 +168,9 @@ class ProfileController extends Controller
         if ($profile->foto_profil) {
             storage::delete($profile->foto_profil);
         }
+
+        $portofolio =Portofolio::where('id',$id)->first();
+        $portofolio->delete();
 
         return redirect('profile')->with('success', 'Profile user has been deleted');
     }

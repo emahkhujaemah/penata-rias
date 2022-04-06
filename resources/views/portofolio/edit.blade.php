@@ -1,6 +1,6 @@
 @extends('adminlte::page')
 
-@section('title', 'Profile')
+@section('title', 'Portofolio')
 
 @section('content_header')
     {{-- <section class="content-header">
@@ -12,7 +12,7 @@
 <section class="content p-3">
     <div class="card card-primary">
         <div class="card-header">
-            <h3 class="card-title">Buat @yield('title')</h3>
+            <h3 class="card-title">Edit @yield('title')</h3>
         </div>
         <div class="card-body">
             <form action="/profile" method="POST" enctype="multipart/form-data" >
@@ -20,56 +20,50 @@
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="form-group">
-                            <label for="name">Nama MUA</label>
-                            <input name="name" class="form-control" value="{{old('name')}}"
-                            >
+                            <label for="user_id">Nama MUA</label>
+                            <input name="user_id" class="form-control" value="{{old('user_id')}}">
                             <div class="text-danger">
-                                @error('name')
+                                @error('user_id')
                                 {{$message}}
                                 @enderror
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="email">Email</label>
-                            <input name="email" class="form-control" value="{{old('email')}}">
+                            <label for="pengalaman">Pengalaman</label>
+                            <input name="pengalaman" class="form-control" value="{{old('pengalaman')}}">
                             <div class="text-danger">
-                                @error('email')
+                                @error('pengalaman')
                                 {{$message}}
                                 @enderror
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="password">Password</label>
-                            <input type="password" name="password" class="form-control" value="{{old('password')}}">
+                            <label for="kemampuan">Kemampuan</label>
+                            <input name="kemampuan" class="form-control" value="{{old('kemampuan')}}">
                             <div class="text-danger">
-                                @error('password')
+                                @error('kemampuan')
                                 {{$message}}
                                 @enderror
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="nama_pemilik">Nama Pemilik</label>
-                            <input name="nama_pemilik" class="form-control" value="{{old('nama_pemilik')}}">
+                            <label for="aktivitas_sekarang">Aktifitas Sekarang</label>
+                            <input name="aktivitas_sekarang" class="form-control" value="{{old('aktivitas_sekarang')}}">
                             <div class="text-danger">
-                                @error('nama_pemilik')
+                                @error('aktivitas_sekarang')
                                 {{$message}}
                                 @enderror
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="alamat">Alamat</label>
-                            <input name="alamat" class="form-control" value="{{old('alamat')}}">
-                            <div class="text-danger">
-                                @error('alamat')
-                                {{$message}}
-                                @enderror
+                            <label for="gambar_utama" class="form-label">Gambar Utama</label>
+                            <img class="img-preview img-fluid mb-3 col-sm-5">
+                            <div class="img-preview custom-file img-fluid">
+                            <input type="file" class="custom-file-input form-control" id="gambar_utama" name="gambar_utama" onchange="previewImage()">
+                            <label class="custom-file-label" for="gambar_utama">Pilih Gambar</label>
                             </div>
-                        </div>
-                        <div class="form-group">
-                            <label for="tempat_kerja">Tempat Kerja</label>
-                            <input name="tempat_kerja" class="form-control" value="{{old('tempat_kerja')}}">
                             <div class="text-danger">
-                                @error('tempat_kerja')
+                                @error('gambar_utama')
                                 {{$message}}
                                 @enderror
                             </div>
@@ -77,58 +71,45 @@
                     </div>
                     <div class="col-lg-6">
                         <div class="form-group">
-                            <label for="whatsapp">No Whatsapp</label>
-                            <input name="whatsapp" class="form-control" value="{{old('whatsapp')}}">
+                            <label class="form-label">Gambar Lainnya</label>
+                            <img class="img-preview1 img-fluid mb-3 col-sm-5">
+                            <div class="img-preview1 custom-file img-fluid">
+                            <input type="file" class="custom-file-input form-control" id="gambar1" name="gambar1" onchange="previewImage1()">
+                            <label class="custom-file-label" for="gambar1">Gambar 1</label>
+                            </div>
                             <div class="text-danger">
-                                @error('whatsapp')
+                                @error('gambar1')
                                 {{$message}}
                                 @enderror
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="sosial_media">Sosial Media</label>
-                            <input type="text" name="sosial_media" class="form-control" value="{{old('sosial_media')}}">
+                            <img class="img-preview2 img-fluid mb-3 col-sm-5">
+                            <div class="img-preview2 custom-file img-fluid">
+                            <input type="file" class="custom-file-input form-control" id="gambar2" name="gambar2" onchange="previewImage()">
+                            <label class="custom-file-label" for="gambar2">Gambar 2</label>
+                            </div>
                             <div class="text-danger">
-                                @error('sosial_media')
+                                @error('gambar2')
                                 {{$message}}
                                 @enderror
                             </div>
                         </div>
                         <div class="form-group">
-                            <label for="status">Status</label>
-                            <input name="status" class="form-control" value="{{old('status')}}">
+                            <img class="img-preview3 img-fluid mb-3 col-sm-5">
+                            <div class="img-preview3 custom-file img-fluid">
+                            <input type="file" class="custom-file-input form-control" id="gambar3" name="gambar3" onchange="previewImage()">
+                            <label class="custom-file-label" for="gambar3">Gambar 3</label>
+                            </div>
                             <div class="text-danger">
-                                @error('status')
+                                @error('gambar3')
                                 {{$message}}
                                 @enderror
                             </div>
                         </div>
-                        <div class="form-group">                         
-                            <label for="profil_bio">Profil Bio</label>
-                            <textarea name="profil_bio" id="profil_bio" class="form-control" rows="3" placeholder="Enter"  value="{{old('profil_bio')}}"></textarea>
-                            <div class="text-danger">
-                                @error('profil_bio')
-                                {{$message}}
-                                @enderror
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <div class="form-group">
-                                <label for="foto_profil" class="form-label">Gambar Profil</label>
-                                <img class="img-preview img-fluid mb-3 col-sm-5">
-                                <div class="img-preview custom-file img-fluid">
-                                  <input type="file" class="custom-file-input form-control" id="foto_profil" name="foto_profil" onchange="previewImage()">
-                                  <label class="custom-file-label" for="foto_profil">Pilih Gambar</label>
-                                </div>
-                                <div class="text-danger">
-                                    @error('foto_profil')
-                                    {{$message}}
-                                    @enderror
-                                </div>
-                            </div> 
-                            </div>
-                        </div>
+                        
                     </div>
+                </div>
                 <div class="box-footer">
                 <button type="submit" class="btn btn-primary float-right">Simpan</button>
                 </div>
@@ -142,18 +123,44 @@
 
 <script>
     function previewImage(){
-        const image = document.querySelector('#foto_profil');
+        const image = document.querySelector('#gambar_utama');
+        // const image2 = document.querySelector('#gambar2');
+        // const image3 = document.querySelector('#gambar3');
         const imgPreview = document.querySelector('.img-preview');
+        // const imgPreview2 = document.querySelector('.img-preview2');
+        // const imgPreview3 = document.querySelector('.img-preview3');
 
         imgPreview.style.display = 'block';
+        // imgPreview2.style.display = 'block';
+        // imgPreview3.style.display = 'block';
 
         const oFReader = new FileReader();
+
         oFReader.readAsDataURL(image.files[0]);
+        // oFReader.readAsDataURL(image2.files[0]);
+        // oFReader.readAsDataURL(image3.files[0]);
 
         oFReader.onload = function(oFREvent){
             imgPreview.src = oFREvent.target.result;
+            // imgPreview2.src = oFREvent.target.result;
+            // imgPreview3.src = oFREvent.target.result;
         }
-    }
+    // function previewImage1(){
+    //     const image1 = document.querySelector('#gambar1');
+
+    //     const imgPreview1 = document.querySelector('.img-preview1');
+
+    //     imgPreview1.style.display = 'block';
+
+    //     const oFReader = new FileReader();
+
+    //     oFReader.readAsDataURL(image1.files[1]);
+
+    //     oFReader.onload = function(oFREvent){
+    //         imgPreview1.src = oFREvent.target.result;
+    //     }
+    // }
+}
 </script>
 
 

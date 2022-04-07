@@ -28,11 +28,11 @@ Route::get('/artist', [PortofolioController::class, 'artist']);
 //     return view('pengunjung.artist');
 // });
 
-Route::get('/p_portofolio', function () {
+Route::get('/p-portofolio', function () {
     return view('pengunjung.portofolio');
 });
 
-Route::get('/p_lokasi', function () {
+Route::get('/p-lokasi', function () {
     return view('pengunjung.lokasi');
 });
 

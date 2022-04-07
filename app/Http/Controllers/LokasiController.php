@@ -42,6 +42,7 @@ class LokasiController extends Controller
      */
     public function store(Request $request)
     {
+        // return $request;
         $validatedData = $request->validate([
             'lokasi' => 'required',
             'keterangan' => 'required',

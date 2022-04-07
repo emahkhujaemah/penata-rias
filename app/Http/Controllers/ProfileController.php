@@ -153,7 +153,6 @@ class ProfileController extends Controller
             storage::delete($profile->foto_profil);
         }
 
-
         return redirect('profile')->with('success', 'Profile user has been deleted');
     }
 }

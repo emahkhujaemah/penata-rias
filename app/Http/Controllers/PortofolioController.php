@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Portofolio;
 use App\Models\User;
+use Illuminate\Support\Facades\Storage;
 use Illuminate\Http\Request;
 
 class PortofolioController extends Controller
@@ -88,7 +89,10 @@ class PortofolioController extends Controller
      */
     public function edit(Portofolio $portofolio)
     {
-        return view('portofolio.create');
+        return view('portofolio.edit', [
+            'portofolio' => $portofolio,
+            'profiles' => User::all(),
+        ]);
     }
 
     /**
@@ -98,9 +102,28 @@ class PortofolioController extends Controller
      * @param  \App\Models\Portofolio  $portofolio
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Portofolio $portofolio)
+    public function update(Request $request, $id)
     {
-        //
+        $validatedData = $request->validate([
+            'user_id' => 'required',
+            'pengalaman' => 'required',
+            'kemampuan' => 'required',
+            'aktivitas_sekarang' => 'required',
+            'gambar_utama' => 'image|file|max:1024',
+
+        ]);
+
+        if($request->file('gambar_utama')){
+            if ($request->oldImage) {
+                storage::delete($request->oldImage);
+            }
+            $validatedData['gambar_utama'] = $request->file('gambar_utama')->store('gambar_utama');
+        }
+
+        $portofolio = Portofolio::find($id)
+            ->update($validatedData);
+
+        return redirect('portofolio')->with('success', 'Portofolio has been updated');
     }
 
     /**
@@ -109,8 +132,15 @@ class PortofolioController extends Controller
      * @param  \App\Models\Portofolio  $portofolio
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Portofolio $portofolio)
+    public function destroy($portofolio_id)
     {
-        //
+        $portofolio = Portofolio::where('id',$portofolio_id)->first();
+        $portofolio->delete();     
+
+        if ($portofolio->gambar_utama) {
+            storage::delete($portofolio->gambar_utama);
+        }
+
+        return redirect('portofolio')->with('success', 'Portofolio has been deleted');
     }
 }

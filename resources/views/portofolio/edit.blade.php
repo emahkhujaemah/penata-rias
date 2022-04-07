@@ -15,22 +15,26 @@
             <h3 class="card-title">Edit @yield('title')</h3>
         </div>
         <div class="card-body">
-            <form action="/profile" method="POST" enctype="multipart/form-data" >
+            <form action="/portofolio/{{$portofolio->id}}" method="POST" enctype="multipart/form-data" >
                 @csrf
+                @method('put')
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="form-group">
                             <label for="user_id">Nama MUA</label>
-                            <input name="user_id" class="form-control" value="{{old('user_id')}}">
-                            <div class="text-danger">
-                                @error('user_id')
-                                {{$message}}
-                                @enderror
-                            </div>
+                            <select name="user_id" id="author" class="form-control">
+                                @foreach ($profiles as $profile)
+                                    @if (old('user_id', $portofolio->user_id) == $profile->id)
+                                        <option value="{{$profile->id}}" selected>{{$profile->name}}</option>
+                                    @else
+                                        <option value="{{$profile->id}}">{{$profile->name}}</option>
+                                    @endif          
+                                @endforeach
+                            </select>
                         </div>
                         <div class="form-group">
                             <label for="pengalaman">Pengalaman</label>
-                            <input name="pengalaman" class="form-control" value="{{old('pengalaman')}}">
+                            <input name="pengalaman" class="form-control" value="{{old('pengalaman', $portofolio->pengalaman)}}">
                             <div class="text-danger">
                                 @error('pengalaman')
                                 {{$message}}
@@ -39,7 +43,7 @@
                         </div>
                         <div class="form-group">
                             <label for="kemampuan">Kemampuan</label>
-                            <input name="kemampuan" class="form-control" value="{{old('kemampuan')}}">
+                            <input name="kemampuan" class="form-control" value="{{old('kemampuan', $portofolio->kemampuan)}}">
                             <div class="text-danger">
                                 @error('kemampuan')
                                 {{$message}}
@@ -48,7 +52,7 @@
                         </div>
                         <div class="form-group">
                             <label for="aktivitas_sekarang">Aktifitas Sekarang</label>
-                            <input name="aktivitas_sekarang" class="form-control" value="{{old('aktivitas_sekarang')}}">
+                            <input name="aktivitas_sekarang" class="form-control" value="{{old('aktivitas_sekarang', $portofolio->aktivitas_sekarang)}}">
                             <div class="text-danger">
                                 @error('aktivitas_sekarang')
                                 {{$message}}
@@ -56,6 +60,24 @@
                             </div>
                         </div>
                         <div class="form-group">
+                            <label for="gambar_utama" class="form-label">Gambar Utama</label>
+                            <input type="hidden" name="oldImage" value=" {{$portofolio->gambar_utama}} ">
+                            @if ($portofolio->gambar_utama)
+                                <img src="{{asset('storage/' . $portofolio->gambar_utama)}}" class="img-preview img-fluid mb-3 col-sm-5 d-block">
+                            @else           
+                            <img class="img-preview img-fluid mb-3 col-sm-5">
+                            @endif
+                            <div class="img-preview custom-file img-fluid">
+                                <input type="file" class="custom-file-input form-control" id="gambar_utama" name="gambar_utama" onchange="previewImage()">
+                                <label class="custom-file-label" for="gambar_utama">Pilih Gambar</label>
+                            </div>
+                            <div class="text-danger">
+                                @error('gambar_utama')
+                                {{$message}}
+                                @enderror
+                            </div>
+                        </div> 
+                        {{-- <div class="form-group">
                             <label for="gambar_utama" class="form-label">Gambar Utama</label>
                             <img class="img-preview img-fluid mb-3 col-sm-5">
                             <div class="img-preview custom-file img-fluid">
@@ -67,7 +89,7 @@
                                 {{$message}}
                                 @enderror
                             </div>
-                        </div>
+                        </div> --}}
                     </div>
                     <div class="col-lg-6">
                         <div class="form-group">

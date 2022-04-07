@@ -123,8 +123,8 @@
                             <img class="img-preview img-fluid mb-3 col-sm-5">
                             @endif
                             <div class="img-preview custom-file img-fluid">
-                              <input type="file" class="custom-file-input form-control" id="foto_profil" name="foto_profil" onchange="previewImage()">
-                              <label class="custom-file-label" for="foto_profil">Pilih Gambar</label>
+                                <input type="file" class="custom-file-input form-control" id="foto_profil" name="foto_profil" onchange="previewImage()">
+                                <label class="custom-file-label" for="foto_profil">Pilih Gambar</label>
                             </div>
                             <div class="text-danger">
                                 @error('foto_profil')

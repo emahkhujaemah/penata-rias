@@ -21,8 +21,7 @@
                     <div class="col-lg-6">
                         <div class="form-group">
                             <label for="name">Nama MUA</label>
-                            <input name="name" class="form-control" value="{{old('name')}}"
-                            >
+                            <input name="name" class="form-control" value="{{old('name')}}">
                             <div class="text-danger">
                                 @error('name')
                                 {{$message}}

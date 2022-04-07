@@ -15,18 +15,21 @@
             <h3 class="card-title">Buat @yield('title')</h3>
         </div>
         <div class="card-body">
-            <form action="/profile" method="POST" enctype="multipart/form-data" >
+            <form action="/portofolio" method="POST" enctype="multipart/form-data" >
                 @csrf
                 <div class="row">
                     <div class="col-lg-6">
                         <div class="form-group">
                             <label for="user_id">Nama MUA</label>
-                            <input name="user_id" class="form-control" value="{{old('user_id')}}">
-                            <div class="text-danger">
-                                @error('user_id')
-                                {{$message}}
-                                @enderror
-                            </div>
+                            <select name="user_id" id="profile" class="form-control">
+                                @foreach ($profiles as $profile)
+                                    @if (old('user_id') == $profile->id)
+                                        <option value="{{$profile->id}}" selected>{{$profile->name}}</option>
+                                    @else
+                                        <option value="{{$profile->id}}">{{$profile->name}}</option>
+                                    @endif          
+                                @endforeach
+                            </select>
                         </div>
                         <div class="form-group">
                             <label for="pengalaman">Pengalaman</label>

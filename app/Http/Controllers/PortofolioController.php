@@ -34,7 +34,9 @@ class PortofolioController extends Controller
      */
     public function create()
     {
-        return view('portofolio.create');
+        return view('portofolio.create', [
+            'profiles' => User::all(),
+        ]);
     }
 
     /**
@@ -45,30 +47,23 @@ class PortofolioController extends Controller
      */
     public function store(Request $request)
     {
+        // return $request;
+
         $validatedData = $request->validate([
             'user_id' => 'required',
             'pengalaman' => 'required',
             'kemampuan' => 'required',
             'aktivitas_sekarang' => 'required',
             'gambar_utama' => 'image|file|max:1024',
-            'gambar1' => 'image|file|max:1024',
-            'gambar2' => 'image|file|max:1024',
+            // 'gambar1' => 'image|file|max:1024',
+            // 'gambar2' => 'image|file|max:1024',
+            // 'gambar3' => 'image|file|max:1024',
         ]);
 
-        $gambar = $request->file([
-            'gambar_utama', 
-            'gambar1',
-            'gambar2',
-            'gambar3',
-            'gambar4',
-            'gambar5',
-            'gambar6',
-        ]);
-
-        if($gambar){
-            $validatedData[$gambar] = $request->file($gambar)->store('portofolio');
+        if($request->file('gambar_utama')){
+            $validatedData['gambar_utama'] = $request->file('gambar_utama')->store('gambar_utama');
         }
-
+        
         Portofolio::create($validatedData);
 
         return redirect('portofolio')->with('success', 'Profil telah ditambahkan');

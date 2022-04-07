@@ -81,7 +81,9 @@
                     <td>{{$portofolio->pengalaman}}</td>
                     <td>{{$portofolio->kemampuan}}</td>
                     <td>{{$portofolio->aktivitas_sekarang}}</td>
-                    <td>{{$portofolio->gambar_utama}}</td>
+                    <td>
+                        <img src="{{asset('storage/' . $portofolio->gambar_utama)}}" class="img-fluid" height="50px" alt="{{ $portofolio->profile->name }}">
+                    </td>
                     <td >                                        
                         <form method="post" action="/portofolio/{{$portofolio->id}}" class="form-inline">
                             <a href="/portofolio/{{$portofolio->id}}" class="btn btn-sm btn-success" ><i class="fas fa-eye"></i></a>

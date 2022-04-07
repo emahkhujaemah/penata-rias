@@ -75,6 +75,7 @@ return [
     'usermenu_portofolio_url' => true,
     'usermenu_lokasi_url' => true,
     'usermenu_range_harga_url' => true,
+    'usermenu_artist_url' => true,
 
     /*
     |--------------------------------------------------------------------------

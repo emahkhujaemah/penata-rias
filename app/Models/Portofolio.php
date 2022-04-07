@@ -20,4 +20,24 @@ class Portofolio extends Model
     {
         return $this->belongsTo(User::class, 'user_id');
     }
+
+    public function usermenu_home_url()
+    {
+        return '/';
+    }
+
+    public function usermenu_artist_url()
+    {
+        return 'portofolio';
+    }
+
+    // public function usermenu_artist_url()
+    // {
+    //     return 'portofolio';
+    // }
+
+    // public function usermenu_artist_url()
+    // {
+    //     return 'portofolio';
+    // }
 }

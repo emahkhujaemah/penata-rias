@@ -15,10 +15,10 @@ class PortofolioController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    public function __construct()
-    {
-        $this->middleware('auth');
-    }
+    // public function __construct()
+    // {
+    //     $this->middleware('auth');
+    // }
 
     public function index()
     {
@@ -27,6 +27,22 @@ class PortofolioController extends Controller
             // 'profile' => User::all(),
         ]);
     }
+
+    public function artist()
+    {
+        return view('pengunjung.artist', [
+            'portofolios' => Portofolio::all(),
+            // 'profiles' => User::all(),
+        ]);
+    }
+
+    // public function artist()
+    // {
+    //     return view('pengunjung.artist', [
+    //         'portofolio' => Portofolio::all(),
+    //         // 'profile' => User::all(),
+    //     ]);
+    // }
 
     /**
      * Show the form for creating a new resource.

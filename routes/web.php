@@ -5,6 +5,7 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\PortofolioController;
 use App\Http\Controllers\LokasiController;
+use App\Http\Controllers\PengunjungController;
 
 
 /*
@@ -21,9 +22,11 @@ Route::get('/', function () {
     return view('pengunjung.home');
 });
 
-Route::get('/artist', function () {
-    return view('pengunjung.artist');
-});
+Route::get('/artist', [PortofolioController::class, 'artist']);
+
+// Route::get('/artist', function () {
+//     return view('pengunjung.artist');
+// });
 
 Route::get('/p_portofolio', function () {
     return view('pengunjung.portofolio');

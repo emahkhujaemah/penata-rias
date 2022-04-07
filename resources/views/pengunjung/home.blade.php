@@ -4,6 +4,9 @@
 
 @section('content')
 <!-- ======= Hero Section ======= -->
+<div class="hero-container">
+</div>
+
 <section id="hero">
     <div class="hero-container">
         <div id="heroCarousel" data-bs-interval="5000" class="carousel slide carousel-fade" data-bs-ride="carousel">

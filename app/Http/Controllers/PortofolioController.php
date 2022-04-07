@@ -49,7 +49,6 @@ class PortofolioController extends Controller
     public function store(Request $request)
     {
         // return $request;
-
         $validatedData = $request->validate([
             'user_id' => 'required',
             'pengalaman' => 'required',
@@ -67,7 +66,7 @@ class PortofolioController extends Controller
         
         Portofolio::create($validatedData);
 
-        return redirect('portofolio')->with('success', 'Profil telah ditambahkan');
+        return redirect('portofolio')->with('success', 'Portofolio telah ditambahkan');
     }
 
     /**
@@ -123,7 +122,7 @@ class PortofolioController extends Controller
         $portofolio = Portofolio::find($id)
             ->update($validatedData);
 
-        return redirect('portofolio')->with('success', 'Portofolio has been updated');
+        return redirect('portofolio')->with('success', 'Portofolio telah diupdate');
     }
 
     /**
@@ -141,6 +140,6 @@ class PortofolioController extends Controller
             storage::delete($portofolio->gambar_utama);
         }
 
-        return redirect('portofolio')->with('success', 'Portofolio has been deleted');
+        return redirect('portofolio')->with('success', 'Portofolio telah dihapus');
     }
 }

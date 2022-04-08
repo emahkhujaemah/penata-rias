@@ -27,8 +27,8 @@
         <div class="container">
 
             <div class="row portfolio-container">
-
-                {{-- @foreach ($portofolios->skip(1) as $portofolio) --}}
+                {{-- {{$profiles}} --}}
+                @foreach ($portofolios as $portofolio)
                 <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                     <div class="portfolio-wrap">
                         <img src="{{asset('img')}}/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
@@ -37,12 +37,12 @@
                         <p>App</p>
                         <div class="portfolio-links">
                             <a href="{{asset('img')}}/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
-                            {{-- <a href="/portofolio/{{$portofolio->id}}" title="More Details"><i class="bx bx-link"></i></a> --}}
+                            <a href="/p-profil" title="More Details"><i class="bx bx-link"></i></a>
                         </div>
                         </div>
                     </div>
                 </div>
-                {{-- @endforeach --}}
+                @endforeach
             </div>
 
         </div>

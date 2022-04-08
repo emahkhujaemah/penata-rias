@@ -26,7 +26,16 @@ class PortofolioController extends Controller
     public function portofolio()
     {
         return view('pengunjung.portofolio', [
+            // 'profiles' => User::all(),
             'portofolios' => Portofolio::all(),
+        ]);
+    }
+
+    public function profil()
+    {
+        return view('pengunjung.profil', [
+            'portofolio' => Portofolio::all(),
+            'profil' => User::all(),
         ]);
     }
 
@@ -77,12 +86,9 @@ class PortofolioController extends Controller
      * @param  \App\Models\Portofolio  $portofolio
      * @return \Illuminate\Http\Response
      */
-    public function show(Portofolio $portofolio)
+    public function show()
     {
-        return view('pengunjung.profil', [
-            'portofolio' => $portofolio,
-            'profile' => User::all(),
-        ]);
+       //
     }
 
     /**

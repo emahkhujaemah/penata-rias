@@ -1,6 +1,6 @@
 @extends('layouts.template')
 
-@section('title', 'Lokasi')
+@section('title', 'Profil')
 
 @section('content')
 
@@ -34,16 +34,12 @@
               <div class="swiper-wrapper align-items-center">
 
                 <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-1.jpg" alt="">
+                  <img src="{{asset('storage/' . $profil[1]->foto_profil)}}" alt="">
                 </div>
 
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-2.jpg" alt="">
-                </div>
-
-                <div class="swiper-slide">
-                  <img src="assets/img/portfolio/portfolio-3.jpg" alt="">
-                </div>
+                {{-- <div class="swiper-slide">
+                  <img src="{{asset('storage/' . $portofolio)}}" alt="">
+                </div> --}}
 
               </div>
               <div class="swiper-pagination"></div>
@@ -52,24 +48,26 @@
 
           <div class="col-lg-4">
             <div class="portfolio-info">
-              <h3>Project information</h3>
+              <h3>Profil Penata Rias - MUA</h3>
               <ul>
-                <li><strong>Category</strong>: Web design</li>
-                <li><strong>Client</strong>: ASU Company</li>
-                <li><strong>Project date</strong>: 01 March, 2020</li>
-                <li><strong>Project URL</strong>: <a href="#">www.example.com</a></li>
+                <li><strong>Nama Brand</strong>: {{$profil[1]->name}}</li>
+                <li><strong>Nama Pemilik</strong>: {{$profil[1]->nama_pemilik}}</li>
+                <li><strong>Alamat</strong>: {{$profil[1]->alamat}}</li>
+                <li><strong>Website</strong>: <a href="#">{{$profil[1]->sosial_media}}</a></li>
+                <li><strong>Tempat Kerja</strong>: <a href="#">{{$profil[1]->tempat_kerja}}</a></li>
+                <li><strong>Status</strong>: <a href="#">{{$profil[1]->status}}</a></li>
+                {{-- <li><strong>Status</strong>: <a href="#">{{$portofolio[1]->pengalaman}}</a></li> --}}
               </ul>
             </div>
             <div class="portfolio-description">
-              <h2>This is an example of portfolio detail</h2>
+              <h2>Profil Biografi</h2>
               <p>
-                Autem ipsum nam porro corporis rerum. Quis eos dolorem eos itaque inventore commodi labore quia quia. Exercitationem repudiandae officiis neque suscipit non officia eaque itaque enim. Voluptatem officia accusantium nesciunt est omnis tempora consectetur dignissimos. Sequi nulla at esse enim cum deserunt eius.
+                {{$profil[1]->profil_bio}}
               </p>
             </div>
           </div>
 
         </div>
-
       </div>
     </section><!-- End Portfolio Details Section -->
 

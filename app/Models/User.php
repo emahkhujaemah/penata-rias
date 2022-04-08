@@ -68,7 +68,7 @@ class User extends Authenticatable
 
     public function usermenu_artist_url()
     {
-        return 'portofolio';
+        return 'artist';
     }
 
     public function usermenu_p_home_url()

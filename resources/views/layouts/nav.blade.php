@@ -16,7 +16,7 @@
             <li><a href="/p-lokasi">Lokasi</a></li>
             @if (Route::has('login'))
                 @auth
-                    <li><a href="{{ url('/dashboard') }}">Dashboard</a></li>
+                    <li><a href="{{ url('/home') }}">Dashboard</a></li>
                 @else
                     <li><a href="{{ route('login') }}">Log in</a></li>
     

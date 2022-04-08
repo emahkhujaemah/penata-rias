@@ -251,9 +251,9 @@ return [
             'text' => 'search',
         ],
         [
-            'text'        => 'Dashboard',
-            'url'         => 'dashboard',
-            'icon'        => 'nav-icon fas fa-tachometer-alt',
+            'text' => 'Dashboard',
+            'url'  => 'home',
+            'icon' => 'nav-icon fas fa-tachometer-alt',
         ],
         ['header' => 'account_settings'],
         [
@@ -273,11 +273,11 @@ return [
             'url'     => 'lokasi',
             'icon'    => 'fas fa-fw fa-landmark',
         ],
-        [
-            'text'    => 'Range Harga',
-            'url'     => 'range-harga',
-            'icon'    => 'fas fa-fw fa-money-bill',
-        ],
+        // [
+        //     'text'    => 'Range Harga',
+        //     'url'     => 'range-harga',
+        //     'icon'    => 'fas fa-fw fa-money-bill',
+        // ],
     ],
 
     /*

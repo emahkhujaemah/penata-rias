@@ -20,6 +20,13 @@ class ProfileController extends Controller
     //     $this->middleware('auth');
     // }
     
+    public function home()
+    {
+        return view('pengunjung.home', [
+            'profiles' => User::all(),
+        ]);
+    }
+
     public function index()
     {
         $this->middleware('auth');

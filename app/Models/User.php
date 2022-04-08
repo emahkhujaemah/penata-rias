@@ -71,4 +71,9 @@ class User extends Authenticatable
         return 'portofolio';
     }
 
+    public function usermenu_p_home_url()
+    {
+        return '/';
+    }
+
 }

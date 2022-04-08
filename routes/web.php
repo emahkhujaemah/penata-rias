@@ -18,10 +18,7 @@ use App\Http\Controllers\PengunjungController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-    return view('pengunjung.home');
-});
-
+Route::get('/', [ProfileController::class, 'home']);
 Route::get('/artist', [ProfileController::class, 'artist']);
 Route::get('/p-portofolio', [PortofolioController::class, 'portofolio']);
 Route::get('/p-lokasi', [LokasiController::class, 'lokasi']);

@@ -45,7 +45,7 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => 'Make-Up <b>Artist</b>',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -79,6 +79,7 @@ return [
 
     'usermenu_p_portofolio_url' => true,
     'usermenu_p_lokasi_url' => true,
+    'usermenu_p_home_url' => true,
 
     /*
     |--------------------------------------------------------------------------
@@ -197,7 +198,7 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'home',
+    'dashboard_url' => '/',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',

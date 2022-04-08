@@ -8,6 +8,7 @@
 <title>Penata Rias |  @yield('title')</title>
 <meta content="" name="description">
 <meta content="" name="keywords">
+<meta name="dicoding:email" content="khuza.emah24@gmail.com">
 
 <!-- Google Fonts -->
 <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">

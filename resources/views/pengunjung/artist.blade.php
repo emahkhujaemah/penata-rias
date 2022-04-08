@@ -17,9 +17,9 @@
   
           <ol>
             <li><a href="/">Home</a></li>
-            <li>Team</li>
+            <li>@yield('title')</li>
           </ol>
-          <h2>Team</h2>
+          <h2>@yield('title')</h2>
   
         </div>
       </section><!-- End Breadcrumbs -->

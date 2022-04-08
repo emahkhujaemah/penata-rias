@@ -14,15 +14,13 @@
     <!-- ======= Breadcrumbs ======= -->
     <section id="breadcrumbs" class="breadcrumbs">
         <div class="container">
-  
-          <ol>
-            <li><a href="index.html">Home</a></li>
-            <li>Team</li>
-          </ol>
-          <h2>Team</h2>
-  
+        <ol>
+            <li><a href="/">Home</a></li>
+            <li>@yield('title')</li>
+        </ol>
+        <h2>@yield('title')</h2>  
         </div>
-      </section><!-- End Breadcrumbs -->
+    </section><!-- End Breadcrumbs -->
 
     <!-- ======= Team Section ======= -->
     <section id="team" class="team">

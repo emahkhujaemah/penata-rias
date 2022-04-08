@@ -72,7 +72,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-6">
+                    {{-- <div class="col-lg-6">
                         <div class="form-group">
                             <label class="form-label">Gambar Lainnya</label>
                             <img class="img-preview1 img-fluid mb-3 col-sm-5">
@@ -111,7 +111,7 @@
                             </div>
                         </div>
                         
-                    </div>
+                    </div> --}}
                 </div>
                 <div class="box-footer">
                 <button type="submit" class="btn btn-primary float-right">Simpan</button>

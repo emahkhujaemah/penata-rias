@@ -77,21 +77,8 @@
                                 @enderror
                             </div>
                         </div> 
-                        {{-- <div class="form-group">
-                            <label for="gambar_utama" class="form-label">Gambar Utama</label>
-                            <img class="img-preview img-fluid mb-3 col-sm-5">
-                            <div class="img-preview custom-file img-fluid">
-                            <input type="file" class="custom-file-input form-control" id="gambar_utama" name="gambar_utama" onchange="previewImage()">
-                            <label class="custom-file-label" for="gambar_utama">Pilih Gambar</label>
-                            </div>
-                            <div class="text-danger">
-                                @error('gambar_utama')
-                                {{$message}}
-                                @enderror
-                            </div>
-                        </div> --}}
                     </div>
-                    <div class="col-lg-6">
+                    {{-- <div class="col-lg-6">
                         <div class="form-group">
                             <label class="form-label">Gambar Lainnya</label>
                             <img class="img-preview1 img-fluid mb-3 col-sm-5">
@@ -130,7 +117,7 @@
                             </div>
                         </div>
                         
-                    </div>
+                    </div> --}}
                 </div>
                 <div class="box-footer">
                 <button type="submit" class="btn btn-primary float-right">Simpan</button>

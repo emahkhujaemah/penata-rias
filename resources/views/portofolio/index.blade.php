@@ -87,7 +87,6 @@
                     <td > 
                         <a href="/portofolio/{{$portofolio->id}}" class="btn btn-sm btn-success" ><i class="fas fa-eye"></i></a>
                         <a href="/portofolio/{{$portofolio->id}}/edit" class="btn btn-sm btn-warning" ><i class="fas fa-edit"></i></a>
-                        <button class="btn btn-sm btn-danger" data-toggle="modal" data-target="#delete"><i class="fas fa-trash"></i></button>    
                         <form method="post" action="/portofolio/{{$portofolio->id}}" class="form-inline">
                             @csrf
                             @method('delete') 

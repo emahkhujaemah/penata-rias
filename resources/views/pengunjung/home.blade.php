@@ -5,7 +5,6 @@
 @section('content')
 <!-- ======= Hero Section ======= -->
 <div class="hero-container">
-    <input type="hidden">
 </div>
 
 <section id="hero">

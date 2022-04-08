@@ -66,4 +66,9 @@ class User extends Authenticatable
         return $this->hasMany(Portofolio::class);
     }
 
+    public function usermenu_artist_url()
+    {
+        return 'portofolio';
+    }
+
 }

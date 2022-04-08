@@ -15,4 +15,9 @@ class Lokasi extends Model
     {
         return 'lokasi';
     }
+
+    public function usermenu_p_lokasi_url()
+    {
+        return 'p-lokasi';
+    }
 }

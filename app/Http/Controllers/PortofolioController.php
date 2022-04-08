@@ -15,22 +15,18 @@ class PortofolioController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-    // public function __construct()
-    // {
-    //     $this->middleware('auth');
-    // }
-
     public function index()
     {
+        $this->middleware('auth');
         return view('portofolio.index', [
             'portofolios' => Portofolio::all(),
             // 'profile' => User::all(),
         ]);
     }
 
-    public function artist()
+    public function portofolio()
     {
-        return view('pengunjung.artist', [
+        return view('pengunjung.portofolio', [
             'portofolios' => Portofolio::all(),
             // 'profiles' => User::all(),
         ]);

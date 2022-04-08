@@ -29,56 +29,24 @@
         <div class="container">
 
             <div class="row">
-            {{-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                    <div class="member">
-                        @foreach ($portofolio as $artist)
-                            <img src="{{asset('img')}}/team/team-1.jpg" alt="">
-                            <h4>{{$artist->pengalaman}}</h4>
-                            <span>{{$artist->kemampuan}}</span>
-                            <p>Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut</p>
-                            <div class="social">
-                                <a href=""><i class="bi bi-twitter"></i></a>
-                                <a href=""><i class="bi bi-facebook"></i></a>
-                                <a href=""><i class="bi bi-instagram"></i></a>
-                                <a href=""><i class="bi bi-linkedin"></i></a>
-                            </div>
-                            @endforeach
-                    </div>
-                </div> --}}
 
+                @foreach ($profiles->skip(1) as $artist)
                 <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
                     <div class="member">
-                        <img src="{{asset('img')}}/team/team-2.jpg" alt="">
-                        <h4>Sarah Jhinson</h4>
-                        <span>Product Manager {{$portofolios->pengalaman}} </span>
-                        <p>
-                        Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
-                        </p>
-                        <div class="social">
-                        <a href=""><i class="bi bi-twitter"></i></a>
-                        <a href=""><i class="bi bi-facebook"></i></a>
-                        <a href=""><i class="bi bi-instagram"></i></a>
-                        <a href=""><i class="bi bi-linkedin"></i></a>
-                        </div>
+                            <img src="{{asset('img')}}/team/team-1.jpg" alt="">
+                            <h4 class="text-decoration-underline pb-3 text-capitalize">{{$artist->name}}</h4>
+                            <h6 class="text-danger">{{$artist->nama_pemilik}}</h6>
+                            <p>{{$artist->profil_bio}}</p>
+                            <div class="social">
+                                <a href=""><i class="bi bi-facebook"></i></a>
+                                <a href=""><i class="bi bi-instagram"></i></a>
+                                {{-- <a href=""><i class="bi bi-twitter"></i></a>
+                                <a href=""><i class="bi bi-tiktok"></i></a> --}}
+                            </div>
                     </div>
                 </div>
+                @endforeach
 
-                {{-- <div class="col-lg-4 col-md-6 d-flex align-items-stretch">
-                    <div class="member">
-                        <img src="{{asset('img')}}/team/team-3.jpg" alt="">
-                        <h4>William Anderson</h4>
-                        <span>CTO</span>
-                        <p>
-                        Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
-                        </p>
-                        <div class="social">
-                        <a href=""><i class="bi bi-twitter"></i></a>
-                        <a href=""><i class="bi bi-facebook"></i></a>
-                        <a href=""><i class="bi bi-instagram"></i></a>
-                        <a href=""><i class="bi bi-linkedin"></i></a>
-                        </div>
-                    </div>
-                </div> --}}
             </div>
         </div>
     </section>

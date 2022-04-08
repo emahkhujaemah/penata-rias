@@ -22,7 +22,9 @@ Route::get('/', function () {
     return view('pengunjung.home');
 });
 
-Route::get('/artist', [PortofolioController::class, 'artist']);
+Route::get('/artist', [ProfileController::class, 'artist']);
+Route::get('/p-portofolio', [PortofolioController::class, 'portofolio']);
+Route::get('/p-lokasi', [LokasiController::class, 'lokasi']);
 
 // Route::get('/artist', function () {
 //     return view('pengunjung.artist');

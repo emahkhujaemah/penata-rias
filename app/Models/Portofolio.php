@@ -26,18 +26,8 @@ class Portofolio extends Model
         return '/';
     }
 
-    public function usermenu_artist_url()
+    public function usermenu_p_portofolio_url()
     {
-        return 'portofolio';
+        return 'p-portofolio';
     }
-
-    // public function usermenu_artist_url()
-    // {
-    //     return 'portofolio';
-    // }
-
-    // public function usermenu_artist_url()
-    // {
-    //     return 'portofolio';
-    // }
 }

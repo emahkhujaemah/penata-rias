@@ -77,6 +77,9 @@ return [
     'usermenu_range_harga_url' => true,
     'usermenu_artist_url' => true,
 
+    'usermenu_p_portofolio_url' => true,
+    'usermenu_p_lokasi_url' => true,
+
     /*
     |--------------------------------------------------------------------------
     | Layout
@@ -194,7 +197,7 @@ return [
     */
 
     'use_route_url' => false,
-    'dashboard_url' => 'dashboard',
+    'dashboard_url' => 'home',
     'logout_url' => 'logout',
     'login_url' => 'login',
     'register_url' => 'register',

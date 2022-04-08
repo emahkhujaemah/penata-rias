@@ -41,9 +41,8 @@
             <div class="col-lg-3 col-md-6 footer-contact">
             <h4>Link Penting</h4>
             <p>
-                a href="https://drive.google.com/drive/folders/1mOp-HznU_ONr0Lai75lbwTlvg6Iz7v07?usp=sharing" class="twitter"><i class="bx bxl-twitter"></i> Demo Aplikasi</a><br>
-				a href="https://khuzaemah.github.io/" class="twitter"><i class="bx bxl-github"></i> Portofolio</a><br>
-                United States <br><br>
+                <a href="https://drive.google.com/drive/folders/1mOp-HznU_ONr0Lai75lbwTlvg6Iz7v07?usp=sharing" <i class="bx bxl-"></i> Demo Aplikasi</a><br>
+				<a href="https://khuzaemah.github.io/" ><i class="bx bxl-github"></i> Portofolio</a><br><br>
                 <strong>Phone:</strong> +62 822 1578 6671<br>
                 <strong>Email:</strong> khuza.emah24@gmail.com<br>
             </p>

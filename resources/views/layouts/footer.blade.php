@@ -24,45 +24,40 @@
             <h4>Useful Links</h4>
             <ul>
                 <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-                <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-                <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-                <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-                <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Artist</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Portofolio</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Lokasi</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Range Harga</a></li>
             </ul>
             </div>
 
             <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Services</h4>
             <ul>
-                <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-                <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-                <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-                <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-                <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+                <li><i class="bx bx-chevron-right"></i> <a href="#">Mengumpulkan Data MUA</a></li>
             </ul>
             </div>
 
             <div class="col-lg-3 col-md-6 footer-contact">
-            <h4>Contact Us</h4>
+            <h4>Link Penting</h4>
             <p>
-                A108 Adam Street <br>
-                New York, NY 535022<br>
+                a href="https://drive.google.com/drive/folders/1mOp-HznU_ONr0Lai75lbwTlvg6Iz7v07?usp=sharing" class="twitter"><i class="bx bxl-twitter"></i> Demo Aplikasi</a><br>
+				a href="https://khuzaemah.github.io/" class="twitter"><i class="bx bxl-github"></i> Portofolio</a><br>
                 United States <br><br>
-                <strong>Phone:</strong> +1 5589 55488 55<br>
-                <strong>Email:</strong> info@example.com<br>
+                <strong>Phone:</strong> +62 822 1578 6671<br>
+                <strong>Email:</strong> khuza.emah24@gmail.com<br>
             </p>
 
             </div>
 
             <div class="col-lg-3 col-md-6 footer-info">
             <h3>About Eterna</h3>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+            <p>Saya adalah Mahasiswa Politeknik Negeri Indramayu Prodi D4 Rekayasa Perangkat Lunak.</p>
             <div class="social-links mt-3">
-                <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-                <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-                <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-                <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-                <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+                <a href="https://twitter.com/EmahKhuza" class="twitter"><i class="bx bxl-twitter"></i></a>
+                <a href="https://facebook.com/yoshikonightray" class="facebook"><i class="bx bxl-facebook"></i></a>
+                <a href="https://www.instagram.com/khuza.emah24/" class="instagram"><i class="bx bxl-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/emah-khujaemah-58b080196/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
             </div>
             </div>
 

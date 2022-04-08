@@ -20,7 +20,6 @@ class PortofolioController extends Controller
         $this->middleware('auth');
         return view('portofolio.index', [
             'portofolios' => Portofolio::all(),
-            // 'profile' => User::all(),
         ]);
     }
 
@@ -28,17 +27,8 @@ class PortofolioController extends Controller
     {
         return view('pengunjung.portofolio', [
             'portofolios' => Portofolio::all(),
-            // 'profiles' => User::all(),
         ]);
     }
-
-    // public function artist()
-    // {
-    //     return view('pengunjung.artist', [
-    //         'portofolio' => Portofolio::all(),
-    //         // 'profile' => User::all(),
-    //     ]);
-    // }
 
     /**
      * Show the form for creating a new resource.
@@ -89,7 +79,10 @@ class PortofolioController extends Controller
      */
     public function show(Portofolio $portofolio)
     {
-        //
+        return view('pengunjung.profil', [
+            'portofolio' => $portofolio,
+            'profile' => User::all(),
+        ]);
     }
 
     /**

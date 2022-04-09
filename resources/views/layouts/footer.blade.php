@@ -8,10 +8,11 @@
             <i class="bi bi-phone d-flex align-items-center ms-4"><span>+62 822 1578 6671</span></i>
             </div>
             <div class="social-links d-none d-md-flex align-items-center">
+            <a href="https://wa.me/6282215786671"><i class="bi bi-whatsapp"></i></a>
             <a href="https://twitter.com/EmahKhuza" class="twitter"><i class="bi bi-twitter"></i></a>
-            <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-            <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-            <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
+            <a href="https://facebook.com/yoshikonightray" class="facebook"><i class="bi bi-facebook"></i></a>
+            <a href="https://www.instagram.com/khuza.emah24/" class="instagram"><i class="bi bi-instagram"></i></a>
+            <a href="https://www.linkedin.com/in/emah-khujaemah-58b080196/" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
             </div>
         </div>
     </section>

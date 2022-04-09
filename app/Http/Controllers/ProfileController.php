@@ -87,7 +87,7 @@ class ProfileController extends Controller
 
         User::create($validatedData);
 
-        return redirect('portofolio')->with('success', 'Portofolio telah ditambahkan');
+        return redirect('profile')->with('success', 'Portofolio telah ditambahkan');
     }
 
     /**

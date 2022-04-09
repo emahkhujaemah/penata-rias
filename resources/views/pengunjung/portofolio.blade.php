@@ -27,7 +27,6 @@
         <div class="container">
 
             <div class="row portfolio-container">
-                {{-- {{$profiles}} --}}
                 @foreach ($portofolios as $portofolio)
                 <div class="col-lg-4 col-md-6 portfolio-item filter-app">
                     <div class="portfolio-wrap">

@@ -68,6 +68,7 @@
                             <h6 class="text-danger">{{$artist->nama_pemilik}}</h6>
                             <p>{{$artist->profil_bio}}</p>
                             <div class="social">
+                                <a href=""><i class="bi bi-whatsapp"></i></a>
                                 <a href=""><i class="bi bi-facebook"></i></a>
                                 <a href=""><i class="bi bi-instagram"></i></a>
                                 {{-- <a href=""><i class="bi bi-twitter"></i></a>

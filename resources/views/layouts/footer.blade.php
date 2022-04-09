@@ -8,7 +8,7 @@
             <i class="bi bi-phone d-flex align-items-center ms-4"><span>+62 822 1578 6671</span></i>
             </div>
             <div class="social-links d-none d-md-flex align-items-center">
-            <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
+            <a href="https://twitter.com/EmahKhuza" class="twitter"><i class="bi bi-twitter"></i></a>
             <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
             <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
             <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></i></a>
@@ -41,8 +41,8 @@
             <div class="col-lg-3 col-md-6 footer-contact">
             <h4>Link Penting</h4>
             <p>
-                <a href="https://drive.google.com/drive/folders/1mOp-HznU_ONr0Lai75lbwTlvg6Iz7v07?usp=sharing" <i class="bx bxl-"></i> Demo Aplikasi</a><br>
-				<a href="https://khuzaemah.github.io/" ><i class="bx bxl-github"></i> Portofolio</a><br><br>
+                <a href="https://drive.google.com/drive/folders/1mOp-HznU_ONr0Lai75lbwTlvg6Iz7v07?usp=sharing"> <i class="bx bxs-video"></i> Video Demo Aplikasi </a><br>
+				<a href="https://khuzaemah.github.io/" ><i class="bx bxs-user-account"></i> Portofolio</a><br><br>
                 <strong>Phone:</strong> +62 822 1578 6671<br>
                 <strong>Email:</strong> khuza.emah24@gmail.com<br>
             </p>
@@ -50,9 +50,10 @@
             </div>
 
             <div class="col-lg-3 col-md-6 footer-info">
-            <h3>About Eterna</h3>
+            <h3>About Emah</h3>
             <p>Saya adalah Mahasiswa Politeknik Negeri Indramayu Prodi D4 Rekayasa Perangkat Lunak.</p>
             <div class="social-links mt-3">
+                <a href="https://wa.me/6282215786671" class="whatsapp"><i class="bx bxl-whatsapp"></i></a>
                 <a href="https://twitter.com/EmahKhuza" class="twitter"><i class="bx bxl-twitter"></i></a>
                 <a href="https://facebook.com/yoshikonightray" class="facebook"><i class="bx bxl-facebook"></i></a>
                 <a href="https://www.instagram.com/khuza.emah24/" class="instagram"><i class="bx bxl-instagram"></i></a>
